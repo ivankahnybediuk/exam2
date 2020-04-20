@@ -283,6 +283,14 @@ body {
   margin-bottom: 170px;
 }
 
+@media screen and (max-width: 980px) {
+  .what-we-do h1 {
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+}
+
 .what-we-do_container_first-line_image {
   position: relative;
 }
@@ -320,6 +328,13 @@ body {
   margin-top: 85px;
   margin-bottom: 15px;
   padding: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .what-we-do_container_first-line_text h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .what-we-do_container_first-line_text h1 {
@@ -377,6 +392,13 @@ body {
   margin-bottom: 140px;
 }
 
+@media screen and (max-width: 980px) {
+  .what-we-do_container_second-line {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
 .what-we-do_container_second-line_text {
   text-align: left;
 }
@@ -389,6 +411,13 @@ body {
   margin-top: 85px;
   margin-bottom: 15px;
   padding: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .what-we-do_container_second-line_text h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
 }
 
 .what-we-do_container_second-line_text h1 {
@@ -492,5 +521,71 @@ body {
   bottom: 0;
   z-index: 100;
   display: none;
+}
+
+.news {
+  background-image: url(img/news-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.news_line {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 140px;
+  margin-bottom: 40px;
+  width: 100px;
+  border-bottom: white 2px solid;
+}
+
+.news h1 {
+  font-family: 'GothamMedium', sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.news_slider_item {
+  width: 370px;
+  height: 520px;
+  background-color: white;
+}
+
+.news_slider_item_img {
+  width: 370px;
+  height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.news_slider_item_text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #4b5562;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  line-height: 20px;
+}
+
+.news_slider_item h1 {
+  font-family: 'GothamBold', sans-serif;
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 22px;
+  color: #2c4058;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */

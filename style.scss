@@ -238,6 +238,11 @@ body{
             text-align: center;    
             margin-top: 165px;
             margin-bottom: 170px;
+            @media screen and (max-width:980px){
+                font-size: 36px;
+                margin-top: 40px;
+                margin-bottom: 70px;
+            }
     }
     &_container{
         &_first-line{
@@ -273,6 +278,10 @@ body{
                     margin-top: 85px;
                     margin-bottom: 15px;
                     padding: 0;
+                    @media screen and (max-width:980px){
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                    }
                 }
                 h1{
                     @include GothamBold();
@@ -320,6 +329,10 @@ body{
         &_second-line{
             margin-top: 210px;
             margin-bottom: 140px;
+            @media screen and (max-width:980px){
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
             &_text{
                 text-align: left;
                 h3{
@@ -330,6 +343,10 @@ body{
                     margin-top: 85px;
                     margin-bottom: 15px;
                     padding: 0;
+                    @media screen and (max-width:980px){
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                    }
                 }
                 h1{
                     @include GothamBold();
@@ -420,6 +437,76 @@ body{
             bottom: 0;
             z-index: 100;
             display: none;
+        }
+    }
+}
+.news{
+    background-image: url(img/news-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &_line{
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 140px;
+        margin-bottom: 40px;
+        width: 100px;
+        border-bottom: white 2px solid;
+    }
+    h1{
+            @include GothamMedium();
+            font-size: 44px;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-align: center;  
+            padding-bottom: 100px;  
+    }
+    &_slider{
+        &_item{
+            width: 370px;
+            height: 520px;
+            background-color: white;
+            &_img{
+            width: 370px;
+            height: 240px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+            &_text{
+                @include openSans();
+                font-size: 18px;
+                color: rgb(75, 85, 98);
+                text-align: left; 
+                margin-left: 25px;
+                margin-right: 25px;
+                padding: 0;  
+                margin-top: 20px; 
+                margin-bottom: 40px;  
+                line-height: 20px;           
+            }
+            h1{
+                @include GothamBold();
+                margin-top: 30px;
+                font-size: 22px;
+                color: rgb(44, 64, 88);
+                text-transform: uppercase;
+                text-align: left;
+                margin-left: 25px;
+                margin-right: 25px;
+                padding: 0;
+            }
+            &_author{
+                &_img{
+
+                }
+                &_name{
+
+                }
+                &_date{
+
+                }
+            }
         }
     }
 }
