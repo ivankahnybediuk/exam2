@@ -41,6 +41,8 @@ $(".slider-header").slick({
     mobileFirst:true
   });
 
-
-
+$(".what-we-do_container_first-line_text_button").on("click", function(){
+    $(".what-we-do_container_modal_1").css("display", "block");
+    $(".filter").css("display", "block")
+})
 })

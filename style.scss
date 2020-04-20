@@ -315,7 +315,25 @@ body{
             text-indent: 2.5em;
             border: black solid 1px;
             border-radius: 10px;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445)k;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+            position: fixed;
+            top: 0;
+            right: 20%;
+            left: 20%;
+            margin: auto;
+            bottom: 0;
+            z-index: 200;
+            display: none;   
+        }
+        .filter{
+            background-color: rgba(66, 61, 66, 0.411);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            display: none;
         }
     }
 }
