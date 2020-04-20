@@ -41,8 +41,22 @@ $(".slider-header").slick({
     mobileFirst:true
   });
 
-$(".what-we-do_container_first-line_text_button").on("click", function(){
-    $(".what-we-do_container_modal_1").css("display", "block");
+$("#first-article-button").on("click", function(){
+    $("#first-article").css("display", "block");
     $(".filter").css("display", "block")
 })
+})
+$(".filter").on("click", function(){
+    $("#first-article").css("display", "none");
+    $(".filter").css("display", "none")
+});
+
+$("#second-article-button").on("click", function(){
+    $("#second-article").css("display", "block");
+    $(".filter").css("display", "block")
+})
+
+$(".filter").on("click", function(){
+    $("#second-article").css("display", "none");
+    $(".filter").css("display", "none")
 })

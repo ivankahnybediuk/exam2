@@ -291,7 +291,7 @@ body{
                         color: rgb(75, 85, 98);
                         text-align: left;
                 }
-                &_button{
+                .article_button{
                     @include GothamBook();
                         font-size: 14px;
                         color: rgb(44, 64, 88);
@@ -308,22 +308,108 @@ body{
                             transform: translate(3px, 3px);
                         }
                 }
+                .text_location{
+                    margin: 60px auto 65px;
+                    font-size: 18px;
+                    color: rgb(44, 64, 88);
+                     text-align: left; 
+                     @include openSansItalic();  
+                }
             }
         }
-        &_modal_1{
+        &_second-line{
+            margin-top: 210px;
+            margin-bottom: 140px;
+            &_text{
+                text-align: left;
+                h3{
+                    @include GothamBook();
+                    font-size: 18px;
+                    color: rgb(44, 64, 88);
+                    text-transform: uppercase;   
+                    margin-top: 85px;
+                    margin-bottom: 15px;
+                    padding: 0;
+                }
+                h1{
+                    @include GothamBold();
+                    font-size: 30px;
+                    color: rgb(44, 64, 88);
+                    text-transform: uppercase;
+                    margin:0;
+                    text-align: left;
+                    padding: 0;
+                }
+                &_article{
+                    @include openSans();
+                    margin-top: 20px;
+                    margin-bottom: 40px;
+                        font-size: 18px;
+                        color: rgb(75, 85, 98);
+                        text-align: left;
+                }
+                .article_button{
+                    @include GothamBook();
+                        font-size: 14px;
+                        color: rgb(44, 64, 88);
+                        text-transform: uppercase;
+                        text-align: center; 
+                         border-width: 1px;
+                         border-color: rgb(44, 64, 88);
+                        border-style: solid;
+                        width: 200px;
+                        height: 55px;
+                        padding-top: 20px;
+                        &:hover{
+                            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.246);
+                            transform: translate(3px, 3px);
+                        }
+                }
+                .text_location{
+                    margin: 60px auto 65px;
+                    font-size: 18px;
+                    color: rgb(44, 64, 88);
+                     text-align: left; 
+                     @include openSansItalic();  
+                }
+            }
+            &_image{
+                position: relative;
+                &_photo{
+                    position: relative;
+                    max-width: 630px;
+                    height: 470px;
+                    background-image: url(img/what-we-do-2.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    z-index: 3;
+                }
+                &_bg{
+                    background-color: #7e5aff;
+                    width: 630px;
+                    height: 470px;
+                    position: absolute;
+                    top:-70px;
+                    left: 215px;
+                    z-index: 1;
+                }
+            }
+        }
+        .modal{
+            background-color: white;
             padding: 20px;
             text-indent: 2.5em;
-            border: black solid 1px;
             border-radius: 10px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
             position: fixed;
-            top: 0;
-            right: 20%;
-            left: 20%;
-            margin: auto;
-            bottom: 0;
+            width: 80%;
+            left: 10%;
+            top: 20px;
+            bottom: 20px;
             z-index: 200;
-            display: none;   
+            display: none; 
+            overflow: auto;  
         }
         .filter{
             background-color: rgba(66, 61, 66, 0.411);
