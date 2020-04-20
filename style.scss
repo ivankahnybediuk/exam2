@@ -41,10 +41,20 @@
 body{
     box-sizing: border-box;
 }
+.about-us{
+    position: static;
+}
 .nav-container{
     background-color: transparent;
-    position: relative;
-    padding-top: 55px;
+    position: absolute;
+    width: 74%;
+    top: 55px;
+    left:13%;
+    z-index:20;
+    @media screen and (max-width:1073px){
+        left: 5%;
+        width: 90%;
+    }
     &_row{
         &_logo{
             height: 60px;
@@ -52,7 +62,7 @@ body{
             background-image: url(img/logo.png);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             @media screen and (max-width:1073px){
                 background-size: contain;
             }
@@ -112,8 +122,8 @@ body{
     }
 }
 .slider-header{
-    height: 800px;
-    position: absolute;
+    max-width: 100%;
+    // max-height: 100vh;
     &_items{
         height: 100%;
         h1{
@@ -123,6 +133,22 @@ body{
             text-transform: uppercase;
             text-align: center;
             padding-top: 370px;
+            @media screen and (max-width:1130px){
+                font-size: 60px;
+                padding-top: 330px;
+            }
+            @media screen and (max-width:950px){
+                font-size: 60px;
+                padding-top: 330px;
+            }
+            @media screen and (max-width:850px){
+                font-size: 40px;
+                padding-top: 300px;
+            }
+            @media screen and (max-width:555px){
+                font-size: 40px;
+                padding-top: 350px;
+            }
         }
         h3{
             font-size: 18px;
@@ -131,6 +157,23 @@ body{
             text-align: center; 
             @include  GothamBook; 
             margin-top: 38px;
+            margin-bottom: 320px;
+            @media screen and (max-width:1130px){
+                font-size: 16px;
+                margin-bottom: 270px;
+            }
+            @media screen and (max-width:950px){
+                font-size: 16px;
+                margin-bottom: 270px;
+            }
+            @media screen and (max-width:800px){
+                font-size: 16px;
+                margin-bottom: 230px;
+            }
+            @media screen and (max-width:555px){
+                font-size: 16px;
+                margin-bottom: 200px;
+            }
         }
     }
     #slide-h-1{
@@ -156,5 +199,67 @@ body{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+}
+
+.down-arrow{
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    z-index:5;
+    position: absolute;
+    color: white;
+    border: white solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 8px;
+    margin:auto;
+    top:590px;
+    left:47%;
+    &:hover{
+        transform: translateY(10px);
+        box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.432);
+    }
+    a{
+        color: white;
+        &:hover{
+            color: white;
+        }
+    }
+}
+
+.what-we-do{
+    position: static;
+    h1{
+        @include GothamBold();
+            font-size: 44px;
+            color: rgb(44, 64, 88);
+            text-transform: uppercase;
+            text-align: center;    
+            margin-top: 165px;
+            margin-bottom: 100px;
+    }
+    &_container{
+        &_first-line{
+            &_image{
+                position: relative;
+                &_photo{
+                    max-width: 630px;
+                    height: 470px;
+                    background-image: url(img/what-we-do-1png.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                &_bg{
+                    background-color: #55b7ff;
+                    width: 630px;
+                    height: 470px;
+                    position: absolute;
+                    top:-70px;
+                    left: -215px;
+                }
+            }
+        }
     }
 }

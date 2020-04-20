@@ -25,16 +25,22 @@ function cleanStylesMenuItems (){
     $(".nav-item a").removeClass("menu-item_active")
 };
 $(".slider-header").slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     autoplay: true,
-    pauseOnFocus: true,
+    autoplaySpeed: 2000,
+    // dots: true
+    slidesPerRow:1,
     vertical: true,
-    cssEase: 'linear'
+    verticalSwiping: true,
+    centerMode: false,
+    adaptiveHeight:true,
+    adaptiveWidth: true,
+    edgeFriction:0,
+    pauseOnHover: false,
+    mobileFirst:true
   });
 
 
 
-});
+})
