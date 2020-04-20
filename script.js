@@ -24,6 +24,16 @@ function cleanStylesMenuItems (){
     $(".nav-item i").addClass("far fa-circle");
     $(".nav-item a").removeClass("menu-item_active")
 };
+$(".slider-header").slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    autoplay: true,
+    pauseOnFocus: true,
+    vertical: true,
+    cssEase: 'linear'
+  });
 
 
 

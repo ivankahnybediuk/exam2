@@ -26,7 +26,8 @@ body {
 }
 
 .nav-container {
-  background-color: green;
+  background-color: transparent;
+  position: relative;
   padding-top: 55px;
 }
 
@@ -108,5 +109,61 @@ body {
 
 .nav-container_row_social .icon .social:hover {
   color: white;
+}
+
+.slider-header {
+  height: 800px;
+  position: absolute;
+}
+
+.slider-header_items {
+  height: 100%;
+}
+
+.slider-header_items h1 {
+  font-family: 'GothamBold', sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 370px;
+}
+
+.slider-header_items h3 {
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: '"GothamBook"', sans-serif;
+  margin-top: 38px;
+}
+
+.slider-header #slide-h-1 {
+  background-image: url(img/slide-h-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider-header #slide-h-2 {
+  background-image: url(img/slide-h-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider-header #slide-h-3 {
+  background-image: url(img/slider-h-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider-header #slide-h-4 {
+  background-image: url(img/slider-h-4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */

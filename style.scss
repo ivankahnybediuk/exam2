@@ -42,7 +42,8 @@ body{
     box-sizing: border-box;
 }
 .nav-container{
-    background-color: green;
+    background-color: transparent;
+    position: relative;
     padding-top: 55px;
     &_row{
         &_logo{
@@ -108,5 +109,52 @@ body{
 
             }
         }
+    }
+}
+.slider-header{
+    height: 800px;
+    position: absolute;
+    &_items{
+        height: 100%;
+        h1{
+          @include GothamBold;  
+            font-size: 80px;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-align: center;
+            padding-top: 370px;
+        }
+        h3{
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-align: center; 
+            @include  GothamBook; 
+            margin-top: 38px;
+        }
+    }
+    #slide-h-1{
+        background-image: url(img/slide-h-1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #slide-h-2{
+        background-image: url(img/slide-h-2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #slide-h-3{
+        background-image: url(img/slider-h-3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #slide-h-4{
+        background-image: url(img/slider-h-4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
