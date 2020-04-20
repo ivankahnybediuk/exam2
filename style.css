@@ -280,16 +280,22 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin-top: 165px;
-  margin-bottom: 100px;
+  margin-bottom: 170px;
+}
+
+.what-we-do_container_first-line_image {
+  position: relative;
 }
 
 .what-we-do_container_first-line_image_photo {
+  position: relative;
   max-width: 630px;
   height: 470px;
   background-image: url(img/what-we-do-1png.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  z-index: 3;
 }
 
 .what-we-do_container_first-line_image_bg {
@@ -297,7 +303,72 @@ body {
   width: 630px;
   height: 470px;
   position: absolute;
-  top: 70px;
-  left: 215px;
+  top: -70px;
+  left: -215px;
+  z-index: 1;
+}
+
+.what-we-do_container_first-line_text {
+  text-align: left;
+}
+
+.what-we-do_container_first-line_text h3 {
+  font-family: '"GothamBook"', sans-serif;
+  font-size: 18px;
+  color: #2c4058;
+  text-transform: uppercase;
+  margin-top: 85px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.what-we-do_container_first-line_text h1 {
+  font-family: 'GothamBold', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #2c4058;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  padding: 0;
+}
+
+.what-we-do_container_first-line_text_article {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #4b5562;
+  text-align: left;
+}
+
+.what-we-do_container_first-line_text_button {
+  font-family: '"GothamBook"', sans-serif;
+  font-size: 14px;
+  color: #2c4058;
+  text-transform: uppercase;
+  text-align: center;
+  border-width: 1px;
+  border-color: #2c4058;
+  border-style: solid;
+  width: 200px;
+  height: 55px;
+  padding-top: 20px;
+}
+
+.what-we-do_container_first-line_text_button:hover {
+  -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.246);
+          box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.246);
+  -webkit-transform: translate(3px, 3px);
+          transform: translate(3px, 3px);
+}
+
+.what-we-do_container_modal_1 {
+  padding: 20px;
+  text-indent: 2.5em;
+  border: black solid 1px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445) k;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445) k;
 }
 /*# sourceMappingURL=style.css.map */

@@ -237,19 +237,21 @@ body{
             text-transform: uppercase;
             text-align: center;    
             margin-top: 165px;
-            margin-bottom: 100px;
+            margin-bottom: 170px;
     }
     &_container{
         &_first-line{
             &_image{
                 position: relative;
                 &_photo{
+                    position: relative;
                     max-width: 630px;
                     height: 470px;
                     background-image: url(img/what-we-do-1png.png);
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: contain;
+                    z-index: 3;
                 }
                 &_bg{
                     background-color: #55b7ff;
@@ -258,8 +260,62 @@ body{
                     position: absolute;
                     top:-70px;
                     left: -215px;
+                    z-index: 1;
                 }
             }
+            &_text{
+                text-align: left;
+                h3{
+                    @include GothamBook();
+                    font-size: 18px;
+                    color: rgb(44, 64, 88);
+                    text-transform: uppercase;   
+                    margin-top: 85px;
+                    margin-bottom: 15px;
+                    padding: 0;
+                }
+                h1{
+                    @include GothamBold();
+                    font-size: 30px;
+                    color: rgb(44, 64, 88);
+                    text-transform: uppercase;
+                    margin:0;
+                    text-align: left;
+                    padding: 0;
+                }
+                &_article{
+                    @include openSans();
+                    margin-top: 20px;
+                    margin-bottom: 40px;
+                        font-size: 18px;
+                        color: rgb(75, 85, 98);
+                        text-align: left;
+                }
+                &_button{
+                    @include GothamBook();
+                        font-size: 14px;
+                        color: rgb(44, 64, 88);
+                        text-transform: uppercase;
+                        text-align: center; 
+                         border-width: 1px;
+                         border-color: rgb(44, 64, 88);
+                        border-style: solid;
+                        width: 200px;
+                        height: 55px;
+                        padding-top: 20px;
+                        &:hover{
+                            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.246);
+                            transform: translate(3px, 3px);
+                        }
+                }
+            }
+        }
+        &_modal_1{
+            padding: 20px;
+            text-indent: 2.5em;
+            border: black solid 1px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445)k;
         }
     }
 }
