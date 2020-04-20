@@ -18,19 +18,18 @@
 .slick-next {
   position: absolute;
   display: block;
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
   background: transparent;
   color: transparent;
-  top: 40%;
+  top: 50%;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding: 0;
-  border-radius: 20px;
-  border: 1px solid white;
+  border: none;
   outline: none;
 }
 
@@ -59,44 +58,43 @@
   font-size: 20px;
   line-height: 1;
   color: white;
-  background-color: transparent;
   opacity: 0.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-prev {
-  left: -80px;
+  left: -25px;
 }
 
 [dir="rtl"] .slick-prev {
   left: auto;
-  right: -80px;
+  right: -25px;
 }
 
 .slick-prev:before {
-  content: "<";
+  content: "←";
 }
 
 [dir="rtl"] .slick-prev:before {
-  content: ">";
+  content: "→";
 }
 
 .slick-next {
-  right: -80px;
+  right: -25px;
 }
 
 [dir="rtl"] .slick-next {
-  left: -80px;
+  left: -25px;
   right: auto;
 }
 
 .slick-next:before {
-  content: ">";
+  content: "→";
 }
 
 [dir="rtl"] .slick-next:before {
-  content: "<";
+  content: "←";
 }
 
 /* Dots */
@@ -118,7 +116,6 @@
 .slick-dots li {
   position: relative;
   display: inline-block;
-  top: -150px;
   height: 20px;
   width: 20px;
   margin: 0 5px;
@@ -156,17 +153,17 @@
   width: 20px;
   height: 20px;
   font-family: "slick";
-  font-size: 10px;
+  font-size: 6px;
   line-height: 20px;
   text-align: center;
-  color: white;
+  color: black;
   opacity: 0.25;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-dots li.slick-active button:before {
-  color: white;
+  color: black;
   opacity: 0.75;
 }
 /*# sourceMappingURL=slick-theme.css.map */
