@@ -60,3 +60,12 @@ $(".filter").on("click", function(){
     $("#second-article").css("display", "none");
     $(".filter").css("display", "none")
 })
+$("#news-1").on("click", function(){
+    $("#news-1").css("display", "block");
+    $(".filter").css("display", "block")
+})
+
+$(".filter").on("click", function(){
+    $("#news-1").css("display", "none");
+    $(".filter").css("display", "none")
+})
