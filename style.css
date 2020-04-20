@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap");
+@font-face {
+  font-family: "GothamBook";
+  src: url("fonts/GothamBook.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GothamMedium";
+  src: url("fonts/Gotham Medium Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GothamBold";
+  src: url("fonts/gothambold1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav-container {
+  background-color: green;
+  padding-top: 55px;
+}
+
+.nav-container_row_logo {
+  height: 60px;
+  max-width: 245px;
+  background-image: url(img/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1073px) {
+  .nav-container_row_logo {
+    background-size: contain;
+  }
+}
+
+.nav-container_row_menu {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.nav-container_row_menu .menu .menu-item {
+  text-align: center;
+  font-size: 14px;
+  font-family: '"GothamBook"', sans-serif;
+  color: rgba(255, 255, 255, 0.637);
+  text-transform: uppercase;
+  line-height: 1.571;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+
+.nav-container_row_menu .menu .menu-item:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-container_row_menu .menu .menu-item_active {
+  color: white;
+}
+
+.nav-container_row_menu .menu .menu-item i {
+  font-size: 12px;
+}
+
+.nav-container_row_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.nav-container_row_social .icon {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.637);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.nav-container_row_social .icon:hover {
+  border: 1px solid white;
+}
+
+.nav-container_row_social .icon .social {
+  display: block;
+  height: 100%;
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.637);
+}
+
+.nav-container_row_social .icon .social:hover {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

@@ -16,3 +16,97 @@
     font-style: normal; 
     font-weight: normal
 }
+@mixin openSansItalic{
+    font-family:  'Open Sans', sans-serif;
+    font-style: italic;
+}
+@mixin openSans{
+    font-family:  'Open Sans', sans-serif;
+}
+@mixin GothamBook{
+    font-family:  '"GothamBook"', sans-serif;
+}
+@mixin GothamMedium{
+    font-family:  'GothamMedium', sans-serif;
+    font-weight: 600;
+}
+@mixin GothamRegular{
+    font-family:  'GothamMedium', sans-serif;
+    font-weight: 400;
+}
+@mixin GothamBold{
+    font-family:  'GothamBold', sans-serif;
+    font-weight: bold;
+}
+body{
+    box-sizing: border-box;
+}
+.nav-container{
+    background-color: green;
+    padding-top: 55px;
+    &_row{
+        &_logo{
+            height: 60px;
+            max-width: 245px;
+            background-image: url(img/logo.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @media screen and (max-width:1073px){
+                background-size: contain;
+            }
+
+        }
+        &_menu{
+            flex-wrap: nowrap;
+            .menu{
+                .menu-item{
+                    text-align: center;
+                        font-size: 14px;
+                        @include  GothamBook;
+                        color: rgba(255, 255, 255, 0.637);
+                        text-transform: uppercase;
+                        line-height: 1.571;
+                        width: max-content;
+                        margin: auto;
+                    &:hover{
+                        text-decoration: none;
+                        color: white;
+                    }
+                    &_active{
+                        color: white;
+                    }
+                    i{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        &_social{
+            display:flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            .icon{
+                width: 40px;
+                height: 40px;
+                font-size:16px;
+                border: 1px solid rgba(255, 255, 255, 0.637); 
+                border-radius:20px ;
+                text-align: center;
+                &:hover{
+                    border: 1px solid white;
+                }
+                .social{
+                display: block;
+                height: 100%;
+                padding-top: 8px;
+                color: rgba(255, 255, 255, 0.637);
+                    &:hover{
+                      color: white;
+                    }
+                }
+
+            }
+        }
+    }
+}
