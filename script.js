@@ -29,7 +29,7 @@ $(".slider-header").slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    // dots: true
+    arrows:false,
     slidesPerRow:1,
     vertical: true,
     verticalSwiping: true,
@@ -40,11 +40,39 @@ $(".slider-header").slick({
     pauseOnHover: false,
     mobileFirst:true
   });
-
+  $(".news_slider").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    focusOnHover:true,
+    autoplay:true,
+    autoplaySpeed:1500,
+    dots:true,
+    accessibility:false,
+    responsive: [
+        {
+          breakpoint: 1155,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          }
+    ]
+  });
 $("#first-article-button").on("click", function(){
     $("#first-article").css("display", "block");
     $(".filter").css("display", "block")
-})
 })
 $(".filter").on("click", function(){
     $("#first-article").css("display", "none");
@@ -60,7 +88,7 @@ $(".filter").on("click", function(){
     $("#second-article").css("display", "none");
     $(".filter").css("display", "none")
 })
-$("#news-1").on("click", function(){
+$("#short-news-1").on("click", function(){
     $("#news-1").css("display", "block");
     $(".filter").css("display", "block")
 })
@@ -68,4 +96,42 @@ $("#news-1").on("click", function(){
 $(".filter").on("click", function(){
     $("#news-1").css("display", "none");
     $(".filter").css("display", "none")
+})
+$("#short-news-2").on("click", function(){
+    $("#news-2").css("display", "block");
+    $(".filter").css("display", "block")
+})
+
+$(".filter").on("click", function(){
+    $("#news-2").css("display", "none");
+    $(".filter").css("display", "none")
+})
+$("#short-news-3").on("click", function(){
+    $("#news-3").css("display", "block");
+    $(".filter").css("display", "block")
+})
+
+$(".filter").on("click", function(){
+    $("#news-3").css("display", "none");
+    $(".filter").css("display", "none")
+})
+$("#short-news-4").on("click", function(){
+    $("#news-4").css("display", "block");
+    $(".filter").css("display", "block")
+})
+
+$(".filter").on("click", function(){
+    $("#news-4").css("display", "none");
+    $(".filter").css("display", "none")
+})
+$("#short-news-5").on("click", function(){
+    $("#news-5").css("display", "block");
+    $(".filter").css("display", "block")
+})
+
+$(".filter").on("click", function(){
+    $("#news-5").css("display", "none");
+    $(".filter").css("display", "none")
+});
+
 })

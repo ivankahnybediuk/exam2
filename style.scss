@@ -41,6 +41,31 @@
 body{
     box-sizing: border-box;
 }
+.modal{
+    background-color: white;
+    padding: 20px;
+    text-indent: 2.5em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+    position: fixed;
+    width: 500px;
+    left: 300px;
+    top: 20px;
+    bottom: 20px;
+    z-index: 200;
+    display: none; 
+    overflow: auto;  
+}
+.filter{
+    background-color: rgba(66, 61, 66, 0.411);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
 .about-us{
     position: static;
 }
@@ -421,12 +446,13 @@ body{
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
             position: fixed;
             width: 80%;
+            height:auto;
             left: 10%;
             top: 20px;
             bottom: 20px;
             z-index: 200;
             display: none; 
-            overflow: auto;  
+            overflow: auto;
         }
         .filter{
             background-color: rgba(66, 61, 66, 0.411);
@@ -451,7 +477,7 @@ body{
         padding-top: 140px;
         margin-bottom: 40px;
         width: 100px;
-        border-bottom: white 2px solid;
+        border-bottom: rgba(255, 255, 255, 0.5) 2px solid;
     }
     h1{
             @include GothamMedium();
@@ -463,11 +489,14 @@ body{
     }
     &_slider{
         &_item{
+            margin-left: 15px;
+            margin-right: 15px;
             width: 370px;
             height: 520px;
             background-color: white;
+            margin-bottom: 210px;
             &_img{
-            width: 370px;
+            width: 100%;
             height: 240px;
             background-position: center;
             background-repeat: no-repeat;
@@ -497,16 +526,62 @@ body{
                 padding: 0;
             }
             &_author{
+                position: relative;
                 &_img{
-
+                    width: 60px;
+                    height: 60px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-left: 20px;
                 }
                 &_name{
-
+                    @include GothamBook();
+                    font-size: 18px;
+                    color: rgb(44, 64, 88);
+                    text-transform: uppercase;
+                    text-align: left;
+                    position: absolute;   
+                    left: 100px; 
+                    top:12px;
                 }
                 &_date{
-
+                    @include GothamBook();
+                    font-size: 14px;
+                    color: rgb(85, 183, 255);
+                    text-align: left;
+                    position: absolute; 
+                    left: 100px; 
+                    top:40px; 
                 }
             }
         }
     }
+    .modal{
+        background-color: white;
+        padding: 20px;
+        text-indent: 2.5em;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+        position: fixed;
+        width: 80%;
+        height:auto;
+        left: 10%;
+        top: 20px;
+        bottom: 20px;
+        z-index: 200;
+        display: none; 
+        overflow: auto;
+    }
+    .filter{
+        background-color: rgba(66, 61, 66, 0.411);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: none;
+    }
+    
 }
