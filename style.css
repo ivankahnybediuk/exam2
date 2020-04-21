@@ -758,7 +758,7 @@ body {
 .gallery_container_grid #first {
   min-width: 285px;
   min-height: 215px;
-  background-image: url(/img/gallery-1.png);
+  background-image: url(img/gallery-1.png);
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -768,7 +768,7 @@ body {
 .gallery_container_grid #second {
   min-height: 215px;
   min-width: 285px;
-  background-image: url(/img/gallery-2.png);
+  background-image: url(img/gallery-2.png);
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: a2;
@@ -777,7 +777,7 @@ body {
 .gallery_container_grid #third {
   min-height: 215px;
   min-width: 285px;
-  background-image: url(/img/gallery-3.png);
+  background-image: url(img/gallery-3.png);
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: a3;
@@ -786,7 +786,7 @@ body {
 .gallery_container_grid #forth {
   min-height: 215px;
   min-width: 285px;
-  background-image: url(/img/gallery-4.png);
+  background-image: url(img/gallery-4.png);
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: b1;
@@ -795,7 +795,7 @@ body {
 .gallery_container_grid #fifth {
   min-height: 215px;
   min-width: 285px;
-  background-image: url(/img/gallery-5.png);
+  background-image: url(img/gallery-5.png);
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: b2;
