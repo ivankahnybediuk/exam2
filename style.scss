@@ -710,9 +710,10 @@ body{
     position: relative;
     &_form{
         background-color: white;
-        height: 455px;
+        min-height: 455px;
         position: absolute;
         top:-300px;
+        min-width: 450px;
         box-shadow: 5px -10px 20px rgba(110, 106, 106, 0.342);
         &_line{
             margin-top: 50px;
@@ -734,15 +735,57 @@ body{
             font-size: 18px;
             color: #2c4058;
             text-align: left;
+            min-width: 230px;
             margin-top: 60px;
             margin-left: 60px;
             line-height: 40px;
             i{
                 color: #7e5aff;
             }
+            @media screen and (max-width:575px){
+                margin: auto;
+                text-align: center;
+            }
         }
         &_container{
-            
+           input{
+               border: none;
+               border-bottom: 1px solid rgba(128, 125, 125, 0.431);
+               max-width: 310px;
+               height: 50px;
+               margin-right:60px ;
+               padding: 0;
+               margin-bottom: 30px;
+               @include GothamBook();
+               font-size: 18px;
+               outline: none;
+               &:focus{
+                border-bottom: 1px solid rgb(8, 8, 8);
+               }
+               @media screen and (max-width:575px){
+                margin: auto;
+            }}
+            button{
+                @include GothamBook();
+                font-size: 14px;
+                color: rgb(44, 64, 88);
+                text-transform: uppercase;
+                text-align: center; 
+                 border-width: 1px;
+                 border-color: rgb(44, 64, 88);
+                border-style: solid;
+                width: 140px;
+                height: 50px;
+                padding-top: 20px;
+                &:hover{
+                    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.246);
+                    transform: translate(3px, 3px);
+                }  
+            }
+           } 
+           #name{
+              margin-top: 45px; 
+           }
         }
     }
 }
