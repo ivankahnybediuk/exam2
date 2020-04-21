@@ -702,7 +702,9 @@ body{
     height: 700px;
 }
 .footer{
-    height: 525px;
+    height: 500px;
+    margin-bottom: 0px;
+    min-height: 525px;
     background-image: url(img/footer-bg.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -748,6 +750,11 @@ body{
             }
         }
         &_container{
+            @media screen and (max-width:575px){
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
            input{
                border: none;
                border-bottom: 1px solid rgba(128, 125, 125, 0.431);
@@ -755,19 +762,20 @@ body{
                height: 50px;
                margin-right:60px ;
                padding: 0;
-               margin-bottom: 30px;
+               margin-bottom: 20px;
                @include GothamBook();
                font-size: 18px;
                outline: none;
                &:focus{
                 border-bottom: 1px solid rgb(8, 8, 8);
                }
-               @media screen and (max-width:575px){
-                margin: auto;
-            }}
+              }
             button{
+                margin-top: 0;
+                margin-bottom: 80px;
                 @include GothamBook();
                 font-size: 14px;
+                background-color: white;
                 color: rgb(44, 64, 88);
                 text-transform: uppercase;
                 text-align: center; 
@@ -776,7 +784,8 @@ body{
                 border-style: solid;
                 width: 140px;
                 height: 50px;
-                padding-top: 20px;
+                padding-top: 8px;
+                margin-left: 80px;
                 &:hover{
                     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.246);
                     transform: translate(3px, 3px);
@@ -787,5 +796,83 @@ body{
               margin-top: 45px; 
            }
         }
+    &_logo{
+        position: relative;
+        img{
+            width: 250px;
+            position: absolute;
+            top: -260px;
+            left:180px;
+            @media screen and (max-width:850px){
+                left: 30px;
+                right: 0;
+        }
+        }
+        &_social{
+            position: absolute;
+            top:-260px;
+            right: 180px;
+            display:flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            width: 160px;
+            .icon{
+                width: 40px;
+                height: 40px;
+                font-size:16px;
+                border: 1px solid rgba(255, 255, 255, 0.637); 
+                border-radius:20px ;
+                text-align: center;
+                &:hover{
+                    border: 1px solid white;
+                }
+                .social{
+                display: block;
+                height: 100%;
+                padding-top: 8px;
+                color: rgba(255, 255, 255, 0.637);
+                    &:hover{
+                      color: white;
+                    }
+                }   
+        }
+        @media screen and (max-width:850px){
+            top: -200px;
     }
+    @media screen and (max-width:550px){
+        left: 30px;
+        right: 0;
+}
+    }
+    &_text-1{
+        position: absolute;
+        top: -150px;
+        left:180px;
+        color: white;
+        font-size: 14px;
+        @include GothamBook();
+        @media screen and (max-width:550px){
+            left: 30px;
+            right: 0;
+    }
+    }
+    &_text-2{
+        position: absolute;
+        top: -150px;
+        right:500px;
+        color: white;
+        font-size: 14px;
+        @include GothamBook();
+        @media screen and (max-width:1200px){
+            right: 200px;
+    }
+    @media screen and (max-width:850px){
+        top: -100px;
+}
+@media screen and (max-width:550px){
+    left: 30px;
+    right: 0;
+}
+}
+}
 }

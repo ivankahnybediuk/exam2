@@ -831,7 +831,9 @@ body {
 }
 
 .footer {
-  height: 525px;
+  height: 500px;
+  margin-bottom: 0px;
+  min-height: 525px;
   background-image: url(img/footer-bg.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -889,6 +891,18 @@ body {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .footer_form_container {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer_form_container input {
   border: none;
   border-bottom: 1px solid rgba(128, 125, 125, 0.431);
@@ -896,7 +910,7 @@ body {
   height: 50px;
   margin-right: 60px;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-family: '"GothamBook"', sans-serif;
   font-size: 18px;
   outline: none;
@@ -906,15 +920,12 @@ body {
   border-bottom: 1px solid #080808;
 }
 
-@media screen and (max-width: 575px) {
-  .footer_form_container input {
-    margin: auto;
-  }
-}
-
-.footer_form_container input_button {
+.footer_form_container button {
+  margin-top: 0;
+  margin-bottom: 80px;
   font-family: '"GothamBook"', sans-serif;
   font-size: 14px;
+  background-color: white;
   color: #2c4058;
   text-transform: uppercase;
   text-align: center;
@@ -923,17 +934,131 @@ body {
   border-style: solid;
   width: 140px;
   height: 50px;
-  padding-top: 20px;
+  padding-top: 8px;
+  margin-left: 80px;
 }
 
-.footer_form_container input_button:hover {
+.footer_form_container button:hover {
   -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.246);
           box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.246);
   -webkit-transform: translate(3px, 3px);
           transform: translate(3px, 3px);
 }
 
-.footer_form_container #name {
+.footer_form #name {
   margin-top: 45px;
+}
+
+.footer_logo {
+  position: relative;
+}
+
+.footer_logo img {
+  width: 250px;
+  position: absolute;
+  top: -260px;
+  left: 180px;
+}
+
+@media screen and (max-width: 850px) {
+  .footer_logo img {
+    left: 30px;
+    right: 0;
+  }
+}
+
+.footer_logo_social {
+  position: absolute;
+  top: -260px;
+  right: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 160px;
+}
+
+.footer_logo_social .icon {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.637);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.footer_logo_social .icon:hover {
+  border: 1px solid white;
+}
+
+.footer_logo_social .icon .social {
+  display: block;
+  height: 100%;
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.637);
+}
+
+.footer_logo_social .icon .social:hover {
+  color: white;
+}
+
+@media screen and (max-width: 850px) {
+  .footer_logo_social {
+    top: -200px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer_logo_social {
+    left: 30px;
+    right: 0;
+  }
+}
+
+.footer_logo_text-1 {
+  position: absolute;
+  top: -150px;
+  left: 180px;
+  color: white;
+  font-size: 14px;
+  font-family: '"GothamBook"', sans-serif;
+}
+
+@media screen and (max-width: 550px) {
+  .footer_logo_text-1 {
+    left: 30px;
+    right: 0;
+  }
+}
+
+.footer_logo_text-2 {
+  position: absolute;
+  top: -150px;
+  right: 500px;
+  color: white;
+  font-size: 14px;
+  font-family: '"GothamBook"', sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer_logo_text-2 {
+    right: 200px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .footer_logo_text-2 {
+    top: -100px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer_logo_text-2 {
+    left: 30px;
+    right: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

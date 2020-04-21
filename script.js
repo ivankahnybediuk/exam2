@@ -1,5 +1,12 @@
 $(document).ready(function(){
-$(" #item-1").on("click", function(){
+  $(".nav-item").on("click","a", function (event) {
+    event.preventDefault();
+    let id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 3000);
+});
+
+  $(" #item-1").on("click", function(){
     cleanStylesMenuItems();
     $("#item-1 i").addClass("fas fa-circle");
     $("#item-1 a").addClass("menu-item_active")
@@ -46,7 +53,7 @@ $(".slider-header").slick({
     slidesToScroll: 1,
     focusOnHover:true,
     autoplay:true,
-    autoplaySpeed:1500,
+    autoplaySpeed:4000,
     dots:true,
     accessibility:false,
     responsive: [
@@ -136,127 +143,179 @@ $(".filter").on("click", function(){
 initMap();
 function initMap() {
    let styledMapType = new google.maps.StyledMapType(
-        [
-          {elementType: 'geometry', stylers: [{color: '#e7e7e7'}]},
-          {elementType: 'labels.text.fill', stylers: [{color: '#757575'}]},
-          {elementType: 'labels.text.stroke', stylers: [{color: '#f7f7f7'}]},
+    [
+      {
+        "elementType": "geometry",
+        "stylers": [
           {
-            featureType: 'administrative',
-            elementType: 'geometry.stroke',
-            stylers: [{color: '#c9b2a6'}]
-          },
-          {
-            featureType: 'administrative.land_parcel',
-            elementType: 'geometry.stroke',
-            stylers: [{color: '#dcd2be'}]
-          },
-          {
-            featureType: 'administrative.land_parcel',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#ae9e90'}]
-          },
-          {
-            featureType: 'landscape.natural',
-            elementType: 'geometry',
-            stylers: [{color: '#dfd2ae'}]
-          },
-          {
-            featureType: 'poi',
-            elementType: 'geometry',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'poi',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'poi.park',
-            elementType: 'geometry.fill',
-            stylers: [{color: '#dadada'}]
-          },
-          {
-            featureType: 'poi.park',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#447530'}]
-          },
-          {
-            featureType: 'road',
-            elementType: 'geometry',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'road.arterial',
-            elementType: 'geometry',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'road.highway',
-            elementType: 'geometry',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'road.highway',
-            elementType: 'geometry.stroke',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'road.highway.controlled_access',
-            elementType: 'geometry',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'road.highway.controlled_access',
-            elementType: 'geometry.stroke',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'road.local',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'transit.line',
-            elementType: 'geometry',
-            stylers: [{color: '#dfd2ae'}]
-          },
-          {
-            featureType: 'transit.line',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#d6d6d6'}]
-          },
-          {
-            featureType: 'transit.line',
-            elementType: 'labels.text.stroke',
-            stylers: [{color: '#ebe3cd'}]
-          },
-          {
-            featureType: 'transit.station',
-            elementType: 'geometry',
-            stylers: [{color: '#d5d5d5'}]
-          },
-          {
-            featureType: 'water',
-            elementType: 'geometry.fill',
-            stylers: [{color: '#b9d3c2'}]
-          },
-          {
-            featureType: 'water',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#92998d'}]
+            "color": "#f5f5f5"
           }
-        ],
+        ]
+      },
+      {
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#bdbdbd"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#dadada"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#c9c9c9"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      }
+    ],
         {name: 'Styled Map'});
-    let uluru = {lat: 40.6702125, lng: -73.8926693};
+    let uluru = {lat: 40.6696396, lng: -73.8999948};
     let map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 13, 
+            zoom: 13.25, 
             center: uluru, 
             mapTypeId:'styled_map',
             disableDefaultUI: true});
     map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
-    let marker = new google.maps.Marker({position: uluru, map: map});
+        let image="img/pin.png"
+    let marker = new google.maps.Marker({position: uluru, map: map, icon:image});
+    
 }
 
 
